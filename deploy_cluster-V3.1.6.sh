@@ -76,21 +76,14 @@ REMOTE_DIR="${REMOTE_DIR:-/var/OpenScapeUC}"
 REMOTE_USER="${REMOTE_USER:-root}"
 
 CONTROL_NODES=(
-    k8suc-control01
-    k8suc-control02
-    k8suc-control03
+    test-k8s-m1
+    test-k8s-m2
+    test-k8s-m3
 )
 
 # "hostname worker-label" - the label is the argument passed to --airgapped.
 WORKER_NODES=(
-    "k8suc-worker01    worker1"
-    "k8suc-worker02    worker2"
-    "k8suc-worker03    worker3"
-    "k8suc-worker04    worker4"
-    "k8suc-worker05-bm worker5"
-    "k8suc-worker06-bm worker6"
-    "k8suc-worker07-bm worker7"
-    "k8suc-worker08-bm worker8"
+    "test-k8s-w1 worker1"
 )
 
 SSH_OPTS=(-o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15)
